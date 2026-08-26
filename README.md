@@ -37,6 +37,8 @@ This project demonstrates hands-on REST API testing using Postman and the JSONPl
 - Collection variables
 - Automated Postman assertions
 
+Collection Runner Result: 8 API requests executed successfully with 22 automated tests passing and 0 failures.
+
 ## How to Run This Project
 
 1. Download or clone this repository.
