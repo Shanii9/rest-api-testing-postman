@@ -36,3 +36,24 @@ This project demonstrates hands-on REST API testing using Postman and the JSONPl
 - Query parameter testing
 - Collection variables
 - Automated Postman assertions
+
+## How to Run This Project
+
+1. Download or clone this repository.
+2. Open Postman.
+3. Import `REST_API_Testing_Portfolio.postman_collection.json`.
+4. Open the imported collection.
+5. Set the collection variable `base_url` to:
+
+   `https://jsonplaceholder.typicode.com`
+
+6. Run individual requests or use the Collection Runner.
+7. Review the automated assertion results in Postman.
+
+## API Used
+
+This project uses the JSONPlaceholder REST API, a public fake API designed for testing and prototyping.
+
+Base URL:
+
+`https://jsonplaceholder.typicode.com`
