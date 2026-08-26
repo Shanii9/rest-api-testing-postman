@@ -43,7 +43,7 @@ Collection Runner Result: 8 API requests executed successfully with 22 automated
 
 1. Download or clone this repository.
 2. Open Postman.
-3. Import `REST_API_Testing_Portfolio.postman_collection.json`.
+3. Import `REST API Testing Portfolio.postman_collection.json`.
 4. Open the imported collection.
 5. Set the collection variable `base_url` to:
 
