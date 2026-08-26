@@ -1,0 +1,19 @@
+Test ID,Method,Endpoint,Scenario,Expected Result,Actual Result,Status
+API-001,GET,/posts/1,Get single post with valid ID,API should return the requested post with status 200 OK,"API returned 200 OK and displayed userId, id, title, and body",Pass
+API-002,GET,/posts,Get all posts,API should return a list of posts with status 200 OK,API returned 200 OK and displayed multiple posts,Pass
+API-003,GET,/posts/999999,Get single post with invalid ID,API should return 404 Not Found,API returned 404 Not Found,Pass
+API-004,POST,/posts,Create new post with valid data,API should create a new post and return 201 Created,API returned 201 Created with a new id,Pass
+API-005,POST,/posts,Create post with missing title and body,Observe how API handles missing fields,API accepted the request and returned 201 Created with userId and a new id,Observation
+API-006,PUT,/posts/1,Update existing post with valid data,API should update the existing post and return 200 OK with updated data.,API should update the existing post and return 200 OK with updated data.,Pass
+API-007,PATCH,/posts/1,Update only the post title,API should update only the title and return 200 OK with the updated post data.,API returned 200 OK and displayed the updated title along with the remaining post fields.,Pass
+API-008,DELETE,/posts/1,Delete an existing post,API should process the delete request successfully.,API returned 200 OK with an empty JSON object {}.,Pass
+API-009,GET,/posts?userId=1,Filter posts by userId using query parameter,API should return 200 OK and only posts belonging to userId 1,API returned 220 OK and all returned posts had userId 1,Pass
+API-010,GET,/posts/,Automatically validate 200 OK status using Postman assertion,Postman test should pass when API returns status 200,Postman assertion passed and confirmed status code 200.,Pass
+API-011,GET,/posts/1,Validate response fields and data type using Postman assertions,"Postman should confirm status 200, id 1, title field presence, and title as string.",All four Postman assertions passed successfully.,Pass
+API-012,GET,/posts/999999,Validate invalid post response using Postman assertions,API should return 404 Not Found with and empty JSON response,Postman assertions confirmed 404 status and empty JSON response.,Pass
+API-013,POST,/posts/,Validate created post response using Postman assertions,"API should return 201 Created, generate an ID, and return the correct title, body, and userId.",All five Postman assertions passed successfully.,Pass
+API-014,POST,/posts,Validate API response time,API response time should be below 2000 milliseconds.,Postman assertion confirmed the response time was below 2000 milliseconds.,Pass
+API-015,POST,/posts,Validate response Content-Type header,API response should have application/json in the Content-Type header.,Postman assertion confirmed that the response Content-Type includes application/json.,Pass
+API-016,PUT,/posts/1,Validate update response with assertions,200 OK and correct updated title,both assertions passed,Pass
+API-017,PATCH,/posts/1,Validate partial update response with assertions,200 OK and correct updated title,both assertions passed,Pass
+API-018,DELETE,/posts/1,Validate delete response with assertions,200 OK and empty JSON {},both assertions passed,Pass
