@@ -1,2 +1,1 @@
-# rest-api-testing-postman
-REST API testing portfolio using Postman and JSONPlaceholder
+# REST API Testing Portfolio
